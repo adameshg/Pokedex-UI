@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #b22222;
+}
+
+body {
+    text-align: center;
+}
+
+/* BANNER */
+
+#banner {
+    background-color: #b22222;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 10px 15px 5px #000;
+}
+
+#title {
+    max-width: 80%;
+    margin: 20px 0;
+}
+
+.banner-item-sm {
+    max-width: 50%;
+}
+
+.circle-sm {
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #000000;
+}
+
+#circles-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+#circle-blue {
+    background-color: #28ABFD;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+#circles-sm-container {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+#circle-red {
+    background-color: #b22222;
+}
+
+#circle-yellow {
+    background-color: #E2C826;
+}
+
+#circle-green {
+    background-color: #4FAE5D;
+}
+
+/* MAIN SECTION */
+
+#screen {
+    display: inline-block;
+    border: 5px solid ;
+    margin: 100px 0;
+    background-color: #d3d3d3;
+    width: 50vw;
+    height: 75vh;
+}
+
+#grid {
+    display: grid;
+    height: 100%;
+    background-color: #d3d3d3;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "id-number . picture picture"
+    ". . picture picture"
+    "name name picture picture"
+    ". . picture picture"
+    "description description description description";
+}
+
+#id-number {
+    grid-area: id-number;
+    background-color: pink;
+}
+
+#name {
+    grid-area: name;
+    background-color: #8ceeee;
+}
+
+#picture {
+    grid-area: picture;
+    background-color: #ebeba1;
+}
+
+#description {
+    grid-area: description;
+    background-color: #9f7d9f;
+}
+
+#container-search {
+    margin-bottom: 50px;
+    width: 75vw;
+}
+
+#form-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-search input {
+    height: 60px;
+}
+
+#form-search button {
+    margin-top: 10px;
+    border: 1px solid #000;
+    background-color: #fde97a;
+    box-shadow: inset 1px 1px 45px #000;
+    font-size: larger;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    color: #396BBA;
+}
+
+#form-search button:hover {
+    /* background-color: #E2C826; */
+    background: #E2C826;
+    -webkit-box-shadow: inset 0px 0px 5px #E2C826;
+        -moz-box-shadow: inset 0px 0px 5px #E2C826;
+        box-shadow: inset 1px 1px 45px #000;
+    outline: none;
+}
+
+/* BREAKPOINTS */
+
+/* On screens that are 1400px or less */
+@media screen and (max-width: 1400px) {
+    #circles-container {
+        padding: 20px 0 0 20px;
+    }
+
+    #circle-blue {
+        width: 75px;
+        height: 75px;
+        border: 12px solid #fff;
+    }
+
+    .circle-sm {
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+        border: 5px solid #000;
+    }
+
+    #form-search {
+        flex-direction: row;
+        width: 50vw;
+        margin: auto;
+    }
+
+    #form-search button {
+        margin-top: initial;
+        height: 60px;
+    }
+}
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+    #title {
+        width: 60%;
+        padding-top: 50px;
+    }
+
+    #circles-container {
+        padding: 20px 0 0 20px;
+    }
+
+    #circle-blue {
+        width: 70px;
+        height: 70px;
+        border: 12px solid #fff;
+    }
+
+    .circle-sm {
+        width: 45px;
+        height: 45px;
+        margin-left: 20px;
+        border: 5px solid #000;
+    }
+
+    #screen {
+        margin: 100px 0;
+        width: 75vw;
+        height: 30vh;
+        min-height: 354px;
+    }
+
+    #form-search {
+        flex-direction: column;
+    }
+
+    #form-search input {
+        height: 75px;
+    }
+    
+    #form-search button {
+        margin-top: 10px;
+        width: 30vw;
+        height: 65px;
+        font-size: 30px;
+    }
+}
+
+/* On screens that are 576px or less */
+@media screen and (max-width: 576px) {
+    #title {
+        width: 70%;
+        padding-top: 20px;
+    }
+
+    #circles-container {
+        padding: 10px 5px;
+    }
+
+    #circle-blue {
+        width: 30px;
+        height: 30px;
+        border: 5px solid #fff;
+    }
+
+    .circle-sm {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        border: 3px solid #000;
+    }
+
+    #screen {
+        margin: 50px 0;
+        width: 75vw;
+        height: 25vh;
+        min-height: 211px;
+    }
+
+    #form-search input {
+        height: 60px;
+    }
+    
+    #form-search button {
+        /* font-size: larger;
+        letter-spacing: 1px;
+        font-weight: 1000; */
+        width: 100%;
+    }
+}
